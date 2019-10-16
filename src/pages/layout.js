@@ -1,12 +1,14 @@
 import React from 'react'
 
 import HeaderBar from '@dhis2/d2-ui-header-bar'
-import Paper from 'material-ui/Paper'
 
 import { TwoPanel } from '@dhis2/d2-ui-core'
 import { Sidebar } from '@dhis2/d2-ui-core'
 import { MainContent } from '@dhis2/d2-ui-core'
 import { Heading } from '@dhis2/d2-ui-core'
+
+import { Paper } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 
 import {
     AndroidSettingsIcon,
@@ -24,7 +26,6 @@ import TestAndroidContainer from '../components/test-android-container'
 
 import '../styles/settings.css'
 import '../styles/layout.css'
-import { Grid } from '@material-ui/core'
 
 const styles = {
     twoPanelMain: {
@@ -191,9 +192,7 @@ function storeRef(ref) {
 } */
 
 function Layout(props) {
-    console.log(props)
-    console.log(props.currentSection)
-    props.d2.i18n.translations['apps'] = 'Search apps'
+    props.d2.i18n.translations['app_search_placeholder'] = 'Search Apps'
     return (
         <Router>
             <HeaderBar d2={props.d2} />
